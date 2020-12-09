@@ -6,7 +6,6 @@ import com.vk.api.sdk.client.actors.GroupActor;
 import com.vk.api.sdk.exceptions.ApiException;
 import com.vk.api.sdk.exceptions.ClientException;
 import com.vk.api.sdk.httpclient.HttpTransportClient;
-import com.vk.api.sdk.objects.apps.responses.GetResponse;
 
 public class Core2 {
     private static final String accessToken = "7dd3a1b523590401b2bcf7a2f78bd54d361c884e2a7788d863cd679569afcd06fd1b7c80c8b7fff0d5e12";
