@@ -1,35 +1,35 @@
-package com.findmylike.config;
+package com.findmylike.bot.config;
 
-import com.vk.api.sdk.client.TransportClient;
 import com.vk.api.sdk.client.VkApiClient;
 import com.vk.api.sdk.client.actors.GroupActor;
 import com.vk.api.sdk.exceptions.ApiException;
 import com.vk.api.sdk.exceptions.ClientException;
-import com.vk.api.sdk.httpclient.HttpTransportClient;
 import com.vk.api.sdk.objects.messages.Message;
 import com.vk.api.sdk.queries.messages.MessagesGetLongPollHistoryQuery;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.SneakyThrows;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Getter
 @Setter
-public class VkCore {
-    private static final String accessToken = "7dd3a1b523590401b2bcf7a2f78bd54d361c884e2a7788d863cd679569afcd06fd1b7c80c8b7fff0d5e12";
-    private static final int groupId = 201009728;
+@Component
+@RequiredArgsConstructor
+public class Core {
 
-    private VkApiClient vk;
-    private GroupActor actor;
+    private final VkApiClient vk;
+    private final GroupActor actor;
 
-    private static int ts;
-    private static int maxMsgId = -1;
+    private int ts;
+    private int maxMsgId = -1;
 
-
-    public VkCore() throws ClientException, ApiException {
-        TransportClient client = HttpTransportClient.getInstance();
-        vk = new VkApiClient(client);
-        actor = new GroupActor(groupId, accessToken);
+    @SneakyThrows
+    @PostConstruct
+    private void init() {
         ts = vk.messages().getLongPollServer(actor).execute().getTs();
     }
 
@@ -53,4 +53,5 @@ public class VkCore {
         }
         return null;
     }
+
 }
