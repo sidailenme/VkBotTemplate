@@ -23,12 +23,6 @@
             <groupId>com.vk.api</groupId>
             <artifactId>sdk</artifactId>
             <version>1.0.7</version>
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <groupId>org.apache.logging.log4j</groupId>-->
-<!--                    <artifactId>log4j-core</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
