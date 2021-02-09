@@ -18,14 +18,20 @@ public class MessageSenderImpl implements MessageSender {
 
     private final Random random = new Random();
 
-
     @SneakyThrows
     public void sendMessage(Message responseMessage){
+        validator(responseMessage);
         core.getVk().messages().send(core.getActor())
                 .message(responseMessage.getText())
-                .peerId(166441826)
+                .peerId(responseMessage.getPeerId())
                 .keyboard(responseMessage.getKeyboard())
                 .randomId(random.nextInt())
                 .execute();
+    }
+
+    private void validator(Message message) {
+        if (message.getKeyboard() == null) {
+            message.setKeyboard(new Keyboard());
+        }
     }
 }

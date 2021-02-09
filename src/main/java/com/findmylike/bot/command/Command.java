@@ -1,10 +1,16 @@
 package com.findmylike.bot.command;
 
+import com.vk.api.sdk.objects.messages.Keyboard;
 import com.vk.api.sdk.objects.messages.Message;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
-@RequiredArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class Command {
 
-    public abstract Message execute(Message message);
+    private String command;
+
+
+    public abstract Message execute();
 }

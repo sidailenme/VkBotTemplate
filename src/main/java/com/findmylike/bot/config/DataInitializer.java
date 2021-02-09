@@ -14,8 +14,7 @@ public class DataInitializer {
     @Bean
     public Set<Command> commandSet() {
         Set<Command> commandSet = new HashSet<>();
-        commandSet.add(new TextCommand());
-
+        commandSet.add(new TextCommand("Привет", "Привет)"));
 
         return commandSet;
     }

@@ -1,12 +1,22 @@
 package com.findmylike.bot.command;
 
 import com.vk.api.sdk.objects.messages.Message;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class TextCommand extends Command {
 
-    @Override
-    public Message execute(Message message) {
+    private String responseText;
+    private final Message responseMessage = new Message();
 
-        return null;
+    public TextCommand(String command, String responseText) {
+        super(command);
+        this.responseText = responseText;
+    }
+
+    @Override
+    public Message execute() {
+        responseMessage.setText(responseText);
+        return responseMessage;
     }
 }

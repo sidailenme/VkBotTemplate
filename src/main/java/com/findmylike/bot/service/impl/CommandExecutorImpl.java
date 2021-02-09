@@ -18,9 +18,11 @@ public class CommandExecutorImpl implements CommandExecutor {
 
     @Override
     public void execute(Message requestMessage) {
-        Message responseMessage = new Message();
-        responseMessage.setText("qwe");
-        responseMessage.setKeyboard(new Keyboard());
+        Command command = commandParser.parse(requestMessage);
+
+        Message responseMessage = command.execute();
+        responseMessage.setPeerId(requestMessage.getPeerId());
+
         messageSender.sendMessage(responseMessage);
     }
 }
