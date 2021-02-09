@@ -1,7 +1,6 @@
 package com.findmylike.bot.service.impl;
 
 import com.findmylike.bot.command.Command;
-import com.findmylike.bot.command.TextCommand;
 import com.findmylike.bot.command.UnknownCommand;
 import com.findmylike.bot.service.interfaces.CommandParser;
 import com.vk.api.sdk.objects.messages.Message;

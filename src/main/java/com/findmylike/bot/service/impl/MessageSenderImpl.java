@@ -33,5 +33,8 @@ public class MessageSenderImpl implements MessageSender {
         if (message.getKeyboard() == null) {
             message.setKeyboard(new Keyboard());
         }
+        if (message.getText() == null) {
+            message.setText("");
+        }
     }
 }
