@@ -1,6 +1,5 @@
 package com.findmylike.bot.config;
 
-import com.findmylike.bot.service.Messenger;
 import com.vk.api.sdk.exceptions.ClientException;
 import com.vk.api.sdk.objects.messages.Message;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +14,7 @@ import javax.annotation.PostConstruct;
 public class Server {
 
     private final Core core;
-    private final Messenger messenger;
+//    private final Messenger messenger;
     private final TaskExecutor taskExecutor;
 
     @SneakyThrows
@@ -29,7 +28,7 @@ public class Server {
             try {
                 Message message = core.getMessage();
                 if (message != null) {
-                    taskExecutor.execute(messenger.send(message));
+//                    taskExecutor.execute(messenger.send(message));
                     System.out.println(message.getText());
                 }
             } catch (ClientException e) {
@@ -40,6 +39,4 @@ public class Server {
             }
         }
     }
-
-
 }
