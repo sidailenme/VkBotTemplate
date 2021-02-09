@@ -5,7 +5,6 @@ server:
   port: 5556
 
 spring:
-
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/pubsub
@@ -20,3 +19,5 @@ spring:
 logging:
   level:
     com.vk.api.sdk.httpclient: error
+#  file:
+#    name: log.txt

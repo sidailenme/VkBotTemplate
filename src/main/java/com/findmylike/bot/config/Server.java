@@ -4,6 +4,7 @@ import com.vk.api.sdk.exceptions.ClientException;
 import com.vk.api.sdk.objects.messages.Message;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.stereotype.Component;
 
@@ -11,11 +12,12 @@ import javax.annotation.PostConstruct;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class Server {
 
     private final Core core;
-//    private final Messenger messenger;
     private final TaskExecutor taskExecutor;
+    private final MessageExecutor messageExecutor;
 
     @SneakyThrows
     @PostConstruct
@@ -23,13 +25,12 @@ public class Server {
         System.out.println("Server is running...");
 
         while (true) {
-            Thread.sleep(300);
+            Thread.sleep(500);
 
             try {
                 Message message = core.getMessage();
                 if (message != null) {
-//                    taskExecutor.execute(messenger.send(message));
-                    System.out.println(message.getText());
+                    taskExecutor.execute(messageExecutor.send(message));
                 }
             } catch (ClientException e) {
                 System.out.println("Возникли проблемы");

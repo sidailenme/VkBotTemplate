@@ -16,7 +16,6 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Getter
-@Setter
 @Component
 @RequiredArgsConstructor
 public class Core {
@@ -53,5 +52,4 @@ public class Core {
         }
         return null;
     }
-
 }
