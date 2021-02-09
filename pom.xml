@@ -11,18 +11,20 @@
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
+        <spring.version>2.4.2</spring.version>
+        <vk.version>1.0.8</vk.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>2.4.0</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>com.vk.api</groupId>
             <artifactId>sdk</artifactId>
-            <version>1.0.7</version>
+            <version>${vk.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
