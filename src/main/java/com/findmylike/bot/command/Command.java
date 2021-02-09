@@ -6,7 +6,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public abstract class Command {
 
-    private final String name;
-
-    public abstract void execute(Message message);
+    public abstract Message execute(Message message);
 }

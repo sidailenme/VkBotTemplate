@@ -8,7 +8,6 @@ import com.vk.api.sdk.objects.messages.Message;
 import com.vk.api.sdk.queries.messages.MessagesGetLongPollHistoryQuery;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 

@@ -2,6 +2,8 @@ package com.findmylike.bot.service.impl;
 
 import com.findmylike.bot.config.Core;
 import com.findmylike.bot.service.interfaces.MessageSender;
+import com.vk.api.sdk.objects.messages.Keyboard;
+import com.vk.api.sdk.objects.messages.Message;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
@@ -18,14 +20,12 @@ public class MessageSenderImpl implements MessageSender {
 
 
     @SneakyThrows
-    public void sendMessage(String message, int peerId){
-        if (message.isEmpty()) {
-            throw new IllegalStateException("Message may not be null");
-        }
-            core.getVk().messages().send(core.getActor())
-                    .peerId(peerId)
-                    .message(message)
-                    .randomId(random.nextInt())
-                    .execute();
+    public void sendMessage(Message responseMessage){
+        core.getVk().messages().send(core.getActor())
+                .message(responseMessage.getText())
+                .peerId(166441826)
+                .keyboard(responseMessage.getKeyboard())
+                .randomId(random.nextInt())
+                .execute();
     }
 }

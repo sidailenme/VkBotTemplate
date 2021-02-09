@@ -1,7 +1,9 @@
 package com.findmylike.bot.service.interfaces;
 
+import com.vk.api.sdk.objects.messages.Message;
+
 public interface MessageSender {
 
-    void sendMessage(String message, int peerId);
+    void sendMessage(Message responseMessage);
 
 }
