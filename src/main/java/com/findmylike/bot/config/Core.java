@@ -32,8 +32,8 @@ public class Core {
     @PostConstruct
     private void init() {
         ts = vk.messages().getLongPollServer(groupActor).execute().getTs();
-        GetResponse execute = vk.wall().get(userActor).ownerId(166441826).count(1).execute();
-        System.out.println(execute);
+//        GetResponse execute = vk.wall().get(userActor).ownerId(166441826).count(1).execute();
+//        System.out.println(execute);
     }
 
     public Message getMessage() throws ClientException, ApiException {

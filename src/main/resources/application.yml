@@ -1,5 +1,12 @@
-access_token: 7dd3a1b523590401b2bcf7a2f78bd54d361c884e2a7788d863cd679569afcd06fd1b7c80c8b7fff0d5e12
-group_id: 201009728
+vk-api:
+  auth:
+    groupAccessToken: 7dd3a1b523590401b2bcf7a2f78bd54d361c884e2a7788d863cd679569afcd06fd1b7c80c8b7fff0d5e12
+    groupId: 201009728
+    userAccessToken: E3U2qYshxL62UjPLdxaw
+    userId: 7692396
+
+
+
 
 server:
   port: 5556
