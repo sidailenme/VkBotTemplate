@@ -1,4 +1,4 @@
-package com.findmylike.bot.config;
+package com.findmylike.vkbot.config;
 
 import com.vk.api.sdk.client.TransportClient;
 import com.vk.api.sdk.client.VkApiClient;

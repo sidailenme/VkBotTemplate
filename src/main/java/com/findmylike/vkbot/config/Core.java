@@ -1,4 +1,4 @@
-package com.findmylike.bot.config;
+package com.findmylike.vkbot.config;
 
 import com.vk.api.sdk.client.VkApiClient;
 import com.vk.api.sdk.client.actors.GroupActor;
@@ -6,7 +6,6 @@ import com.vk.api.sdk.client.actors.UserActor;
 import com.vk.api.sdk.exceptions.ApiException;
 import com.vk.api.sdk.exceptions.ClientException;
 import com.vk.api.sdk.objects.messages.Message;
-import com.vk.api.sdk.objects.wall.responses.GetResponse;
 import com.vk.api.sdk.queries.messages.MessagesGetLongPollHistoryQuery;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

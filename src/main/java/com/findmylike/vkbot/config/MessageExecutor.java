@@ -1,6 +1,6 @@
-package com.findmylike.bot.config;
+package com.findmylike.vkbot.config;
 
-import com.findmylike.bot.service.interfaces.CommandExecutor;
+import com.findmylike.vkbot.service.interfaces.CommandExecutor;
 import com.vk.api.sdk.objects.messages.Message;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Scope;

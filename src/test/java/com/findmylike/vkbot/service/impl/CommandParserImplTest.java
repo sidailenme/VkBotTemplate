@@ -1,12 +1,10 @@
-package com.findmylike.bot.service.impl;
+package com.findmylike.vkbot.service.impl;
 
-import com.findmylike.bot.command.Command;
+import com.findmylike.vkbot.command.Command;
 import com.vk.api.sdk.objects.messages.Message;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashSet;

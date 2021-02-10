@@ -1,7 +1,7 @@
-package com.findmylike.bot.service.impl;
+package com.findmylike.vkbot.service.impl;
 
-import com.findmylike.bot.config.Core;
-import com.findmylike.bot.service.interfaces.MessageSender;
+import com.findmylike.vkbot.config.Core;
+import com.findmylike.vkbot.service.interfaces.MessageSender;
 import com.vk.api.sdk.objects.messages.Keyboard;
 import com.vk.api.sdk.objects.messages.Message;
 import lombok.RequiredArgsConstructor;

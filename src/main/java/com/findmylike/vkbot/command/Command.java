@@ -1,4 +1,4 @@
-package com.findmylike.bot.command;
+package com.findmylike.vkbot.command;
 
 import com.vk.api.sdk.objects.messages.Message;
 import lombok.AllArgsConstructor;

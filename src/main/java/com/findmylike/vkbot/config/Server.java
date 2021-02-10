@@ -1,4 +1,4 @@
-package com.findmylike.bot.config;
+package com.findmylike.vkbot.config;
 
 import com.vk.api.sdk.exceptions.ClientException;
 import com.vk.api.sdk.objects.messages.Message;

@@ -1,8 +1,8 @@
-package com.findmylike.bot.service.impl;
+package com.findmylike.vkbot.service.impl;
 
-import com.findmylike.bot.command.Command;
-import com.findmylike.bot.command.UnknownCommand;
-import com.findmylike.bot.service.interfaces.CommandParser;
+import com.findmylike.vkbot.command.Command;
+import com.findmylike.vkbot.command.UnknownCommand;
+import com.findmylike.vkbot.service.interfaces.CommandParser;
 import com.vk.api.sdk.objects.messages.Message;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.findmylike.bot.service.interfaces;
+package com.findmylike.vkbot.service.interfaces;
 
 import com.vk.api.sdk.objects.messages.Message;
 
