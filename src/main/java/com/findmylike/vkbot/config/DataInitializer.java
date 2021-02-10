@@ -1,7 +1,7 @@
 package com.findmylike.vkbot.config;
 
-import com.findmylike.vkbot.command.Command;
-import com.findmylike.vkbot.command.TextCommand;
+import com.findmylike.vkbot.model.command.Command;
+import com.findmylike.vkbot.model.command.TextCommand;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

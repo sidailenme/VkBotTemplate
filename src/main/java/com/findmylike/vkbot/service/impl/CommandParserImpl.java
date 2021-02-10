@@ -1,7 +1,7 @@
 package com.findmylike.vkbot.service.impl;
 
-import com.findmylike.vkbot.command.Command;
-import com.findmylike.vkbot.command.UnknownCommand;
+import com.findmylike.vkbot.model.command.Command;
+import com.findmylike.vkbot.model.command.UnknownCommand;
 import com.findmylike.vkbot.service.interfaces.CommandParser;
 import com.vk.api.sdk.objects.messages.Message;
 import lombok.RequiredArgsConstructor;

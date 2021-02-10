@@ -1,4 +1,4 @@
-package com.findmylike.vkbot.command;
+package com.findmylike.vkbot.model.command;
 
 import com.vk.api.sdk.objects.messages.Message;
 

@@ -1,6 +1,6 @@
 package com.findmylike.vkbot.service.impl;
 
-import com.findmylike.vkbot.command.Command;
+import com.findmylike.vkbot.model.command.Command;
 import com.vk.api.sdk.objects.messages.Message;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
