@@ -11,7 +11,7 @@
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
-        <spring.version>2.4.2</spring.version>
+        <spring.version>2.4.0</spring.version>
         <vk.version>1.0.8</vk.version>
     </properties>
 

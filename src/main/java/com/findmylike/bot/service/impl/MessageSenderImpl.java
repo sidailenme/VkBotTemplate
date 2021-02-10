@@ -21,7 +21,7 @@ public class MessageSenderImpl implements MessageSender {
     @SneakyThrows
     public void sendMessage(Message responseMessage){
         validator(responseMessage);
-        core.getVk().messages().send(core.getActor())
+        core.getVk().messages().send(core.getGroupActor())
                 .message(responseMessage.getText())
                 .peerId(responseMessage.getPeerId())
                 .keyboard(responseMessage.getKeyboard())
