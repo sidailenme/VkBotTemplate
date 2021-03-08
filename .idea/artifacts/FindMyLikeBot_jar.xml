@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="FindMyLikeBot:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/FindMyLikeBot_jar</output-path>
     <root id="archive" name="FindMyLikeBot.jar">
-      <element id="module-output" name="FindMyLikeBot" />
+      <element id="module-output" name="VkBotTemplate" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-resolver-dns/4.1.33.Final/netty-resolver-dns-4.1.33.Final.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-transport-native-epoll/4.1.33.Final/netty-transport-native-epoll-4.1.33.Final-linux-x86_64.jar" path-in-jar="/" />
