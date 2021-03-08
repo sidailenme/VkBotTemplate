@@ -1,10 +1,11 @@
-package com.findmylike.vkbot.config;
+package com.vkbot.vkbot.config;
 
 import com.vk.api.sdk.exceptions.ClientException;
 import com.vk.api.sdk.objects.messages.Message;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +19,7 @@ public class Server {
     private final Core core;
     private final TaskExecutor taskExecutor;
     private final MessageExecutor messageExecutor;
+    @Value("${vk-api.config.reconnectTime}") private int reconnectTime;
 
     @SneakyThrows
     @PostConstruct
@@ -30,13 +32,11 @@ public class Server {
             try {
                 Message message = core.getMessage();
                 if (message != null) {
-                    taskExecutor.execute(messageExecutor.send(message));
+                    taskExecutor.execute(messageExecutor.execute(message));
                 }
             } catch (ClientException e) {
-                System.out.println("Возникли проблемы");
-                final int RECONNECT_TIME = 10000;
-                System.out.println("Повторное соединение через " + RECONNECT_TIME / 1000 + " секунд");
-                Thread.sleep(RECONNECT_TIME);
+                log.warn("Повторное соединение через " + reconnectTime / 1000 + " секунд");
+                Thread.sleep(reconnectTime);
             }
         }
     }

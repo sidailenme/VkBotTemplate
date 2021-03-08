@@ -1,7 +1,7 @@
-package com.findmylike.vkbot.config;
+package com.vkbot.vkbot.config;
 
-import com.findmylike.vkbot.service.interfaces.CommandExecutor;
 import com.vk.api.sdk.objects.messages.Message;
+import com.vkbot.vkbot.service.CommandExecutor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -23,7 +23,7 @@ public class MessageExecutor implements Runnable {
         commandExecutor.execute(message);
     }
 
-    public MessageExecutor send(Message requestMessage) {
+    public MessageExecutor execute(Message requestMessage) {
         this.message = requestMessage;
         return this;
     }

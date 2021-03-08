@@ -1,21 +1,17 @@
-package com.findmylike.vkbot.service.impl;
+package com.vkbot.vkbot.service;
 
-import com.findmylike.vkbot.model.command.Command;
-import com.findmylike.vkbot.service.interfaces.CommandExecutor;
-import com.findmylike.vkbot.service.interfaces.CommandParser;
-import com.findmylike.vkbot.service.interfaces.MessageSender;
 import com.vk.api.sdk.objects.messages.Message;
+import com.vkbot.vkbot.model.command.Command;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class CommandExecutorImpl implements CommandExecutor {
+public class CommandExecutor {
 
     private final CommandParser commandParser;
     private final MessageSender messageSender;
 
-    @Override
     public void execute(Message requestMessage) {
         Command command = commandParser.parse(requestMessage);
 

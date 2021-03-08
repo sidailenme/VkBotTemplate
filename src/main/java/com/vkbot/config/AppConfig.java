@@ -1,4 +1,4 @@
-package com.findmylike.config;
+package com.vkbot.config;
 
 import org.springframework.context.annotation.Configuration;
 

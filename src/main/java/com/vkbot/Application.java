@@ -1,4 +1,4 @@
-package com.findmylike;
+package com.vkbot;
 
 
 import org.springframework.boot.SpringApplication;

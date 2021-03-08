@@ -4,6 +4,8 @@ vk-api:
     groupId: 201009728
     userAccessToken: E3U2qYshxL62UjPLdxaw
     userId: 7692396
+  config:
+    reconnectTime: 10_000
 
 
 
@@ -13,7 +15,7 @@ server:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/yalta
     username: root
     password: rootroot

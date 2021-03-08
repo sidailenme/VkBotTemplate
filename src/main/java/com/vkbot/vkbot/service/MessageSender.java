@@ -1,9 +1,8 @@
-package com.findmylike.vkbot.service.impl;
+package com.vkbot.vkbot.service;
 
-import com.findmylike.vkbot.config.Core;
-import com.findmylike.vkbot.service.interfaces.MessageSender;
 import com.vk.api.sdk.objects.messages.Keyboard;
 import com.vk.api.sdk.objects.messages.Message;
+import com.vkbot.vkbot.config.Core;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
@@ -12,7 +11,7 @@ import java.util.Random;
 
 @Service
 @RequiredArgsConstructor
-public class MessageSenderImpl implements MessageSender {
+public class MessageSender {
 
     private final Core core;
 
